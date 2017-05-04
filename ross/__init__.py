@@ -1,4 +1,3 @@
-import functools
 import subprocess
 import os
 
@@ -52,7 +51,6 @@ def get_complete_version(version=None):
     return version
 
 
-@functools.lru_cache()
 def get_git_changeset():
     """Return a numeric identifier of the latest git changeset.
     The result is the UTC timestamp of the changeset in YYYYMMDDHHMMSS format.
