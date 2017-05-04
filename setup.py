@@ -8,13 +8,16 @@ with open('requirements.txt') as f:
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name='ross-django-utils',
+    name='ross',
     version='0.1',
     packages=find_packages(),
     include_package_data=True,
     license='MIT License',
     description='Some of the commonly-used utilities for Django Framework.',
     zip_safe=False,
+    install_requires=requirements,
+    author='Firdouss Ross',
+    author_email='hello@ross.my',
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
