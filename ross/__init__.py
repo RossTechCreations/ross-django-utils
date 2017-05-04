@@ -6,7 +6,7 @@ import datetime
 VERSION = (0, 1, 0, 'alpha', 1)
 
 
-def get_version(version=None):
+def get_version(version=VERSION):
     """Return a PEP 440-compliant version number from VERSION."""
     version = get_complete_version(version)
 
@@ -30,14 +30,14 @@ def get_version(version=None):
     return main + sub
 
 
-def get_main_version(version=None):
+def get_main_version(version=VERSION):
     """Return main version (X.Y[.Z]) from VERSION."""
     version = get_complete_version(version)
     parts = 2 if version[2] == 0 else 3
     return '.'.join(str(x) for x in version[:parts])
 
 
-def get_complete_version(version=None):
+def get_complete_version(version=VERSION):
     """
     Return a tuple of the django version. If version argument is non-empty,
     check for correctness of the tuple provided.
