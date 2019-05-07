@@ -3,7 +3,7 @@ import os
 
 import datetime
 
-VERSION = (0, 1, 0, 'alpha', 1)
+VERSION = (1, 2, 0, 'final', 1)
 
 
 def get_version(version=VERSION):
